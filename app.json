@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "teste_mobiauto",
+    "slug": "teste_mobiauto",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
