@@ -5,7 +5,7 @@ import useHomeViewModel from "./view.model";
 import Searchable from "../../components/input-searchable";
 
 export default function Home() {
-  const { brands, setOptionToResquest } = useHomeViewModel();
+  const { brands, setOptionToResquest, optionSearch } = useHomeViewModel();
 
   return (
     <S.Container>
@@ -17,6 +17,9 @@ export default function Home() {
           onChange={(option: string) => setOptionToResquest('brand', option)}
         />
       )}
+      {
+        optionSearch.brand && <></>
+      }
     </S.Container>
   );
 }
