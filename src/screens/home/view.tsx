@@ -1,16 +1,22 @@
-import { View, Text } from "react-native";
 import React from "react";
 
-import * as S from './styles';
+import * as S from "./styles";
 import useHomeViewModel from "./view.model";
+import Searchable from "../../components/input-searchable";
 
 export default function Home() {
-  const { brands } = useHomeViewModel();
-  console.log(brands)
+  const { brands, setOptionToResquest } = useHomeViewModel();
 
   return (
     <S.Container>
-      <Text>Home</Text>
+      {brands.length > 1 && (
+        <Searchable
+          initValue="Clique para selecionar uma marca de veículo"
+          searchText="Pesquise por uma marca de veículo"
+          allData={brands}
+          onChange={(option: string) => setOptionToResquest('brand', option)}
+        />
+      )}
     </S.Container>
   );
 }
