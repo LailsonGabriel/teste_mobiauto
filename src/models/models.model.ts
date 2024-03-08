@@ -1,7 +1,7 @@
-import { BrandResponse } from "./brands.model";
+import { Brand } from "./brands.model";
 
 export interface CarModelsResponse {
   modelos: CarModels[]
 }
 
-export interface CarModels extends BrandResponse {}
+export interface CarModels extends Brand {}

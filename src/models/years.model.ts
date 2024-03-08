@@ -1,3 +1,3 @@
-import { BrandResponse } from "./brands.model";
+import { Brand } from "./brands.model";
 
-export interface CarYears extends BrandResponse {}
+export interface CarYears extends Brand {}
