@@ -5,4 +5,5 @@ export const Container = styled.View`
   height: 100%;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 `;

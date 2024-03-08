@@ -38,7 +38,8 @@ const useHomeViewModel = (): HomeViewModel => {
   return {
     brands,
     setOptionToResquest,
-    optionSearch
+    optionSearch,
+    models
   }
 }
 

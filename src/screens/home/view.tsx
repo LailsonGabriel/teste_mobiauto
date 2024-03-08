@@ -5,21 +5,26 @@ import useHomeViewModel from "./view.model";
 import Searchable from "../../components/input-searchable";
 
 export default function Home() {
-  const { brands, setOptionToResquest, optionSearch } = useHomeViewModel();
+  const { brands, models, setOptionToResquest, optionSearch } = useHomeViewModel();
 
   return (
     <S.Container>
-      {brands.length > 1 && (
+      {brands?.length > 0 && (
         <Searchable
           initValue="Clique para selecionar uma marca de veículo"
           searchText="Pesquise por uma marca de veículo"
           allData={brands}
-          onChange={(option: string) => setOptionToResquest('brand', option)}
+          onChange={(option: string) => setOptionToResquest("brand", option)}
         />
       )}
-      {
-        optionSearch.brand && <></>
-      }
+      {models?.length > 0 && (
+        <Searchable
+          initValue="Clique para selecionar um modelo de veículo"
+          searchText="Pesquise por um modelo de veículo"
+          allData={models}
+          onChange={(option: string) => setOptionToResquest("model", option)}
+        />
+      )}
     </S.Container>
   );
 }
